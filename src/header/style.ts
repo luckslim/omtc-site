@@ -26,10 +26,4 @@ export const ContainerHeader = styled.div `
             color: ${props=>props.theme['gray-100']};
         }
     }
-    :focus{
-        color: ${props=>props.theme['gray-100']};
-        border-radius:4px;
-        padding: 5px;
-        outline:0;
-    }
 `;

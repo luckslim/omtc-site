@@ -15,10 +15,10 @@ export const StyledCarouselCaption = styled(Carousel.Caption)`
    flex-direction: column;
    align-items: center;
    a{
-      margin-top:100px;
+      margin-top:250px;
       color: ${props=>props.theme['gray-100']};
    }
-   h1{
+   h3{
       color: ${props=>props.theme['gray-300']};
    }
 `;
