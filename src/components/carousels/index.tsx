@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Carousel } from "react-bootstrap";
-import backImgPrimary from '../../assets/back-omtc.jpg'
+import backImgPrimary from '../../assets/back-omtc1.jpg'
 import backImgSecondary from '../../assets/back-omtc2.jpg'
-import backImgthird from '../../assets/back-omtc3.jpg'
+import backImgthird from '../../assets/back-omtc.jpg'
 import { StyledCarousel, StyledCarouselCaption } from './style';
 export function Carousels() {
     return (

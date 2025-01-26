@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Carousel } from "react-bootstrap";
 export const StyledCarousel = styled(Carousel)`
    img{
-      height: 100vh;
+      height: 75vh;
       width: 100%;
       object-fit: cover;
-      opacity: calc(50%);
+      opacity: calc(40%);
    }
 
 `;
@@ -15,7 +15,7 @@ export const StyledCarouselCaption = styled(Carousel.Caption)`
    flex-direction: column;
    align-items: center;
    a{
-      margin-top:250px;
+      margin:50px 0;
       color: ${props=>props.theme['gray-100']};
    }
    h3{
