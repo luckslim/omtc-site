@@ -6,6 +6,7 @@ export const Container = styled.main`
     display: flex;
     justify-items: center;
     justify-content: space-around;
+    margin-bottom: 100px;
 `;
 export const ContainerTitle = styled.div`
     a{
