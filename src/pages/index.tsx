@@ -5,6 +5,7 @@ import { ContentAbout } from '../components/contentAbout';
 import { Header } from '../header';
 import { History } from '../components/history';
 import { TestimonialSwiper } from '../components/Avaliations';
+import { Contact } from '../components/contact';
 export function Home() {
   return (
     <div>
@@ -14,6 +15,7 @@ export function Home() {
       <ContentAbout/>
       <History/>
       <TestimonialSwiper/>
+      <Contact/>
     </div>
   );
 }
