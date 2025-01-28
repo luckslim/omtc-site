@@ -1,7 +1,28 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+//   ,
+  
+//     "compilerOptions": {
+//       "typeRoots": ["node_modules/@types", "node_modules/swiper"]
+//     }
+  
+// }
 {
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "typeRoots": ["node_modules/@types"], // Padrão para tipos instalados
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true, // Ignora verificações de tipos em dependências externas
+    "strict": true,      // Reforça as regras do TypeScript (opcional)
+    "forceConsistentCasingInFileNames": true
+  }
 }
