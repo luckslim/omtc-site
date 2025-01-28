@@ -14,7 +14,7 @@ export const ContainerHeader = styled.div `
     justify-content: space-around;
     background-color: ${props=>props.theme['gray-800-transparent']};
     border-bottom: 100px;
-    height: 150px;
+    height:auto;
     img{
         width: 10rem;
     }

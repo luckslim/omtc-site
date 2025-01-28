@@ -18,9 +18,10 @@ export const ContainerTitle = styled.div`
 
 export const Box = styled.div`
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
+    justify-items: center;
     margin-top: -400px;
 
     @media screen and (max-width: 1680px) {
@@ -34,7 +35,13 @@ export const Box = styled.div`
 export const ContainerProducts = styled.div`
     background-color: ${props=>props.theme['gray-700']};
     padding: 1rem;
-    border-radius: 8px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 350px;
+    &:hover{
+        box-shadow: 1px 1px 20px 1px ${props=>props.theme['yellow-400']};
+        transition:  box-shadow 1s;
+    }
     img{
         width: 100%;
         height: 300px;
@@ -43,19 +50,31 @@ export const ContainerProducts = styled.div`
     }
     h4{
         color:${props=>props.theme['gray-100']};
+        margin: 10px 0;
     }
-    a{
-        background-color: ${props=>props.theme['yellow-300']};
-        color:${props=>props.theme['gray-100']};
-        padding: 0.5rem;
-        border-radius:8px;
-        text-decoration: none;
-        display: pointer;
+    div{
+        display: flex;
+        flex-direction: row-reverse;
+        
+        button{
+            background-color: ${props=>props.theme['yellow-300']};
+            padding: 0.5rem;
+            border: none;
+            border-radius: 8px ;
+            cursor: pointer;
+            color: ${props=>props.theme['gray-900']};
+            font-weight: 500;
+
+
+        }
+        button:hover{
+            background-color: ${props=>props.theme['yellow-400']};
+            color: ${props=>props.theme['gray-700']};
+            font-weight: 500;
+            opacity: 80%;
+            transition: background-color 1s ;
+        }
     }
-    a:hover{
-        background-color: ${props=>props.theme['yellow-400']};
-        color:${props=>props.theme['gray-700']};
-        font-weight: 500;
-    }
+
 
 `;

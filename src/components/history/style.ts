@@ -108,6 +108,7 @@ export const BoxContent = styled.div`
         padding: 1rem;
         border-radius: 8px;
         width: 350px;
+        box-shadow: 1px 1px 7px 0.5px ${props=>props.theme['violet-500']};
         span{
             display: flex;
             flex-direction: row-reverse;
