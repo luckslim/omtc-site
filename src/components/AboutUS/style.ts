@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Container = styled.main`
     background-color: ${props=>props.theme['gray-800']};
-    height: 20vh;
+    margin-bottom: 5rem;
 `; 
 export const ContainerContent = styled.div`
     display: flex;
@@ -11,7 +11,6 @@ export const ContainerContent = styled.div`
     @media screen and (max-width:780px){
         display: grid;
         grid-template-columns: repeat(1,4px);
-        
     }
 `;
 
@@ -27,12 +26,13 @@ export const ContainerCard = styled.div`
     gap: 1rem;
     margin-top: 20px;
     width: 350px;
+    height: 115px;
     img{
         width: 80px;
         filter: invert(50%);
     }
     #mozart{
-        width: 80px;
+        width: 70px;
         filter: invert(100%);
     }
     a{

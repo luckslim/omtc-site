@@ -1,19 +1,17 @@
 import styled from "styled-components";
 export const Container = styled.main`
-    padding-top: 200px;
+    margin-top: 5rem;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-items: center;
     justify-content: space-around;
-    margin-bottom: -400px;
 `;
 export const ContainerTitle = styled.div`
     margin: 10px;
     a{
         text-decoration: none;
         color:${props => props.theme['gray-100']};
-        border-bottom:1px solid ${props => props.theme['violet-500']};
+        border-bottom:1px solid ${props => props.theme['yellow-300']};
     }
 `;
 
@@ -23,7 +21,7 @@ export const BoxContainer = styled.div`
    align-items: center;
    justify-content: center;
    gap: 1rem;
-   margin-bottom: 1rem;
+   margin-bottom: 5rem;
 
    img{
     width:100%;
@@ -108,11 +106,12 @@ export const BoxContent = styled.div`
         padding: 1rem;
         border-radius: 8px;
         width: 350px;
-        box-shadow: 1px 1px 7px 0.5px ${props=>props.theme['violet-500']};
+        margin: 0.3rem 0 ;
+        box-shadow: 1px 1px 50px 0.5px ${props=>props.theme['yellow-300']};
         span{
             display: flex;
             flex-direction: row-reverse;
-            color: ${props => props.theme['violet-500']};
+            color: ${props => props.theme['yellow-300']};
             font-size: 2rem;
         }
         h4{

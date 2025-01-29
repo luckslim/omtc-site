@@ -1,8 +1,6 @@
 import styled from "styled-components";
 export const Container = styled.main`
-    padding-top: 200px;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-items: center;
     justify-content: space-around;
@@ -12,7 +10,7 @@ export const ContainerTitle = styled.div`
     a{
         text-decoration: none;
         color:${props=>props.theme['gray-100']};
-        border-bottom:1px solid ${props=>props.theme['violet-500']};
+        border-bottom:1px solid ${props=>props.theme['yellow-300']};
     }
 `;
 
@@ -22,8 +20,6 @@ export const Box = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
-    margin-top: -300px;
-
     @media screen and (max-width: 1680px) {
         grid-template-columns: repeat(3, 350px);
     }
@@ -39,8 +35,16 @@ export const ContainerProducts = styled.div`
     border-bottom-left-radius: 30px;
     width: 350px;
     &:hover{
-        box-shadow: 1px 1px 20px 1px ${props=>props.theme['yellow-400']};
+        box-shadow: 1px 1px 20px 1px ${props=>props.theme['yellow-300']};
         transition:  box-shadow 1s;
+        button{
+            background-color: ${props=>props.theme['yellow-300']};
+            color: ${props=>props.theme['gray-700']};
+            font-weight: 500;
+            opacity: 80%;
+            transition: background-color 2s ;
+        }
+
     }
     img{
         width: 100%;
@@ -57,18 +61,20 @@ export const ContainerProducts = styled.div`
         flex-direction: row-reverse;
         
         button{
-            background-color: ${props=>props.theme['yellow-300']};
-            padding: 0.5rem;
+            background-color: ${props=>props.theme['gray-800-transparent']};
+            padding: 0.2rem 0.5rem;
             border: none;
             border-radius: 8px ;
             cursor: pointer;
-            color: ${props=>props.theme['gray-900']};
+            color: ${props=>props.theme['gray-300']};
+            border: 1px solid ${props=>props.theme['gray-800']};
             font-weight: 500;
+
 
 
         }
         button:hover{
-            background-color: ${props=>props.theme['yellow-400']};
+            background-color: ${props=>props.theme['yellow-300']};
             color: ${props=>props.theme['gray-700']};
             font-weight: 500;
             opacity: 80%;

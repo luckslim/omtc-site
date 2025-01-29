@@ -1,6 +1,5 @@
 import { BoxContainer, BoxContent,  Container, ContainerTitle } from "./style";
 import Maestro from '../../assets/svg/maestroTemplate.svg'
-import logo from '../../assets/svg/logoSecondary.svg'
 export function History() {
     return (
         <div>

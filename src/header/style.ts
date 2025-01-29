@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Button } from "react-bootstrap";
 export const Container = styled.main`
     position: fixed;
     z-index: 1000;
@@ -16,14 +17,24 @@ export const ContainerHeader = styled.div `
     border-bottom: 100px;
     height:auto;
     img{
-        width: 10rem;
+        width: 8rem;
     }
     nav{
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         a{
             text-decoration: none;
             color: ${props=>props.theme['gray-100']};
         }
+
     }
+`;
+export const ButtonStyle = styled(Button)`
+    background-color: ${props=>props.theme['gray-800-transparent']};
+    padding: 0.2rem 0.5rem;
+    &:hover{
+        opacity: 40%;
+        background-color: transparent;
+    }
+
 `;

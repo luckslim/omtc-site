@@ -6,6 +6,7 @@ import { Header } from '../header';
 import { History } from '../components/history';
 import { TestimonialSwiper } from '../components/Avaliations';
 import { Contact } from '../components/contact';
+import { Working } from '../components/work';
 export function Home() {
   return (
     <div>
@@ -15,6 +16,7 @@ export function Home() {
       <ContentAbout/>
       <History/>
       <TestimonialSwiper/>
+      <Working/>
       <Contact/>
     </div>
   );
