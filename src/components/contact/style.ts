@@ -21,6 +21,7 @@ export const Container = styled.div`
         }
 `;
 export const Map = styled.div`
+        margin: 2rem 0 ;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -44,11 +45,13 @@ export const ContainerContact = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        gap: 1rem;
-        width: 200px;
+        gap: 2rem;
+        width: 100px;
         @media screen and (max-width:780px) {
-                display: flex;
-                
+                span{
+                        width: 300px;
+                        
+                }                
         }
         span{   
                 padding: 1rem;

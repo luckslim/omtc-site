@@ -6,7 +6,7 @@ export const Container = styled.main`
     display: flex;
     justify-items: center;
     justify-content: space-around;
-    margin-bottom: 100px;
+
 `;
 export const ContainerTitle = styled.div`
     a{
@@ -22,7 +22,7 @@ export const Box = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
-    margin-top: -400px;
+    margin-top: -300px;
 
     @media screen and (max-width: 1680px) {
         grid-template-columns: repeat(3, 350px);

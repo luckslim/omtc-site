@@ -1,70 +1,93 @@
 import { Box, Container, ContainerProducts, ContainerTitle } from "./style";
+import violin from '../../assets/instruments/violin.jpg'
+import cello from '../../assets/instruments/violoncelo.png'
 import violao from '../../assets/instruments/violao.jpg'
+import guitar from '../../assets/instruments/eletric-guitar.png'
+import baixo from '../../assets/instruments/baixo.png'
+import clarinete from '../../assets/instruments/clarinete.png'
+import sAlto from '../../assets/instruments/sax-alto.png'
+import sSoprano from '../../assets/instruments/sax-soprano.png'
+import tenor from '../../assets/instruments/sax-tenor.png'
+import piano from '../../assets/instruments/piano.png'
+import teclado from '../../assets/instruments/teclado.png'
+import flauta from '../../assets/instruments/flauta-transversal.png'
+import trompete from '../../assets/instruments/trompete.png'
+import trombone from '../../assets/instruments/trombone.png'
+import baritono from '../../assets/instruments/baritono.png'
+import tuba from '../../assets/instruments/tuba.png'
+import bateria from '../../assets/instruments/bateria.png'
 
 
-const Products = [
+interface Instruments {
+    id: string;
+    name: string;
+    dataDescription: string;
+    description: string;
+    imgUrl: string;
+}
+const Products: Instruments[] = [
     {
         id: '1',
         name: 'Violino',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: violin,
     },
     {
         id: '2',
         name: 'Violoncelo',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: cello,
     },
     {
         id: '3',
         name: 'Violão',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: violao,
     },
     {
         id: '4',
         name: 'Guitarra',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: guitar,
     },
     {
         id: '5',
         name: 'Contra Baixo',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: baixo,
     },
     {
         id: '6',
         name: 'Clarineta',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: clarinete,
     },
     {
         id: '7',
         name: 'Sax alto',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: sAlto ,
     },
     {
         id: '8',
         name: 'Sax Soprano',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: sSoprano ,
     },
     {
         id: '9',
         name: 'Sax Tenor',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: tenor,
     },
 
     {
@@ -72,7 +95,7 @@ const Products = [
         name: 'Piano',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: piano,
     },
 
     {
@@ -80,47 +103,21 @@ const Products = [
         name: 'Teclado',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: teclado,
     },
-
-    {
-        id: '12',
-        name: 'Piano',
-        dataDescription: '',
-        description: '',
-        imgUrl:'',
-    },
-
     {
         id: '13',
         name: 'Flauta Tranversal',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: flauta,
     },
-
-    {
-        id: '14',
-        name: 'Flauta Germânica',
-        dataDescription: '',
-        description: '',
-        imgUrl:'',
-    },
-
-    {
-        id: '15',
-        name: 'Flauta Doce Barroca',
-        dataDescription: '',
-        description: '',
-        imgUrl:'',
-    },
-
     {
         id: '16',
         name: 'Trompete',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: trompete,
     },
 
     {
@@ -128,7 +125,7 @@ const Products = [
         name: 'Trombone',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: trombone,
     },
 
     {
@@ -136,7 +133,7 @@ const Products = [
         name: 'Barítono',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: baritono ,
     },
 
     {
@@ -144,7 +141,7 @@ const Products = [
         name: 'Tuba',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl:tuba,
     },
 
     {
@@ -152,7 +149,7 @@ const Products = [
         name: 'Bateria & Percussão',
         dataDescription: '',
         description: '',
-        imgUrl:'',
+        imgUrl: bateria ,
     }
 ]
 export function ContentAbout() {
@@ -172,7 +169,7 @@ export function ContentAbout() {
             <Box>
                 {Products.map((product) => (
                     <ContainerProducts key={product.id}>
-                        <img src={violao} alt="" />
+                        <img src={product.imgUrl} alt="" />
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <div>
