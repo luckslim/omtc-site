@@ -158,8 +158,8 @@ export function ContentAbout() {
         <div>
             <Container>
                 <ContainerTitle>
-                    <h3><a href="#sobre" id="sobre">Aulas Disponíveis</a></h3>
-                    <p>Lorem ipsum dolor sit </p>
+                    <h3><a href="#">Aulas Disponíveis</a></h3>
+                    <p>Consulte a Disponibilidade em Saiba Mais.</p>
                 </ContainerTitle>
                 <ContainerTitle>
 
@@ -174,7 +174,7 @@ export function ContentAbout() {
                         <p>{product.description}</p>
                         <div>
                             <span></span>
-                            <button>Ver Mais</button>
+                            <button>Saiba Mais</button>
                         </div>
                     </ContainerProducts>
                     

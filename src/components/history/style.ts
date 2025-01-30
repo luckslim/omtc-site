@@ -125,6 +125,23 @@ export const BoxContent = styled.div`
         display: grid;
         grid-template-columns: repeat(1fr);
         gap:1rem;
+        div{
+        background-color: ${props => props.theme['gray-700']};
+        padding: 1rem;
+        border-radius: 8px;
+        width: 350px;
+        margin: 0.3rem 0 ;
+        box-shadow: 1px 1px 10px 0.5px ${props=>props.theme['yellow-300']};
+        span{
+            display: flex;
+            flex-direction: row-reverse;
+            color: ${props => props.theme['yellow-300']};
+            font-size: 2rem;
+        }
+        h4{
+            color: ${props => props.theme['gray-100']};
+        }
+    }
     }
 
 `;

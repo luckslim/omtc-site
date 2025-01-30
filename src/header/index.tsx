@@ -6,7 +6,7 @@ export function Header() {
             <ContainerHeader>
                 <img src={logo} alt="" />
                 <nav>
-                    <ButtonStyle variant='outline-secondary'  href="#" >Home</ButtonStyle>
+                    <ButtonStyle variant='outline-secondary'  href="#home" >Home</ButtonStyle>
                     <ButtonStyle variant='outline-secondary' href="#sobre">Sobre Nós</ButtonStyle>
                 </nav>
                 {/* <NavDropdown title="Dropdown" id="nav-dropdown">

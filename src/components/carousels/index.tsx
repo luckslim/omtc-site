@@ -7,7 +7,7 @@ import { StyledCarousel, StyledCarouselCaption } from './style';
 export function Carousels() {
     return (
         <div>
-            <StyledCarousel data-bs-theme="light">
+            <StyledCarousel id="home" data-bs-theme="light">
                 <Carousel.Item>
                     <img
                         className="d-block w-100"

@@ -5,7 +5,7 @@ import { Checks, Medal } from "phosphor-react";
 export function Working() {
     return (
         <>
-            <ContainerTitle>
+            <ContainerTitle id="sobre">
                 <div>
                     <h3>OMTC & Seu Futuro</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
