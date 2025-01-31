@@ -48,7 +48,7 @@ export const ContainerList = styled.div`
     gap: 1rem;
     width: 600px;
     @media screen and (max-width:780px) {
-        width: 380px;
+        width: 350px;
         display: flex;
     align-items: center;
     justify-items: center;
@@ -58,6 +58,9 @@ export const ContainerList = styled.div`
 `;
 
 export const ContainerListContent = styled.div`
+    letter-spacing: 1px;
+    line-height: 30px;
+    width: 100%;
     h4{
         color: ${props => props.theme['gray-100']};
         border-bottom:1px solid ${props => props.theme['yellow-300']};

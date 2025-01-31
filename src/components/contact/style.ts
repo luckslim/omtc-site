@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, Modal } from "react-bootstrap";
+import {  Modal } from "react-bootstrap";
 
 export const Container = styled.div`
         display: grid;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 
 `;
-export const ContainerWhatsApp = styled.div`
+export const ContainerWhatsApp = styled.a`
         display: flex;
         align-items: center;
         justify-items: center;
