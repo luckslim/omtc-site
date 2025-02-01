@@ -8,7 +8,7 @@ export function Working() {
             <ContainerTitle id="sobre">
                 <div>
                     <h3>OMTC & Seu Futuro</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <p>Seu Futuro aqui é importante!</p>
                 </div>
                 <div></div>
             </ContainerTitle>

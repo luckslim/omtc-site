@@ -1,14 +1,59 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import  'swiper/css';
+import 'swiper/css';
 import 'swiper/css/pagination';
-import { Container, ContainerAvaible, ContainerTestimonial, InfoAvaible } from './style';
+import { Container, ContainerAvaible, ContainerButtonComents, ContainerComents, ContainerTestimonial, InfoAvaible } from './style';
 import { StyledSlide } from './style'
 import Rute from '../../assets/alunos/Rute.jpeg'
+import Sury from '../../assets/alunos/suryCampos.jpg'
+import MaiconLibonati from '../../assets/alunos/MaiconLibonati.webp'
+import PriscilaSena from '../../assets/alunos/PriscilaSena.png'
+
 import Google from '../../assets/google.png'
 import { Star } from 'phosphor-react';
+import { useState } from 'react';
+import { Collapse } from 'react-bootstrap';
+interface Person {
+    id: number;
+    nome: string;
+    idPerson: string;
+    imageUrl: string;
+    description: string;
+}
+
+const students: Person[] = [
+    {
+        id: '1',
+        nome: 'Rute Motta Lisboa',
+        idPerson: 'Aluna-OMTC',
+        imageUrl: Rute,
+        description: 'A minha jornada na música teve o início na OMTC aos 8 anos de idade, onde aprendi a ler partitura e aprendi minhas primeiras músicas no violino. A OMTC me ajudou no meu desenvolvimento técnico no instrumento e na minha percepção musical. Hoje, tenho 19 anos e estudo música na UNIRIO e tive a oportunidade de tocar em importantes salas de concertos e em Teatros, como a Sala Cecília Meireles e o Theatro Municipal do Rio de Janeiro. ',
+    },
+    {
+        id: '2',
+        nome: 'Sury Silva ',
+        idPerson: 'Aluna-OMTC',
+        imageUrl: Sury,
+        description: 'Uma experiência maravilhosa, um ótimo profissional,atencioso e muito didático.',
+    },
+    {
+        id: '3',
+        nome: 'Maicon Libonati',
+        idPerson: 'Aluno-OMTC',
+        imageUrl: MaiconLibonati,
+        description: 'Um excelente lugar para aprender música, ótimas didáticas de ensino. Um estudo de qualidade. ',
+    },
+    {
+        id: '4',
+        nome: 'Pricila Sena',
+        idPerson: 'Aluna-OMTC',
+        imageUrl: PriscilaSena,
+        description: 'Riquísima em conhecimento,eu recomendo e super indico! Aprendizado de ampla qualidade, Gratidão!',
+    },
+]
 
 export const TestimonialSwiper = () => {
+    const [open, setOpen] = useState(false);
     return (
         <Container>
             <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -18,13 +63,13 @@ export const TestimonialSwiper = () => {
                     speed={300}
                     autoplay={{ delay: 4000 }}
                     slidesPerView="auto"
-                    pagination={{ 
+                    pagination={{
                         el: ".swiper-pagination", // Use a valid DOM element here
                         type: "bullets",
                         clickable: true,
                         bulletClass: "bg-amber-400",
                         bulletActiveClass: "#ffff",
-                     }}
+                    }}
                     breakpoints={{
                         320: {
                             slidesPerView: 1,
@@ -38,269 +83,64 @@ export const TestimonialSwiper = () => {
                     className="init-swiper"
                 >
                     {/* Testimonial 1 */}
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
+                    {students.map((person) => (
+                        <SwiperSlide key={person.id}>
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
+                            <StyledSlide>
+                                <ContainerTestimonial >
+                                    <ContainerAvaible >
+                                        <img
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
+                                            src={person.imageUrl}
+                                            className="testimonial-img"
+                                            alt="Rute Lisboa"
+                                        />
                                         <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
+                                            <img
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
+                                                src={Google}
+                                                alt="Google"
+                                            />
                                         </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
+                                    </ContainerAvaible>
+                                    <InfoAvaible>
+                                        <h4>{person.nome}
+                                            <span>
+                                                <Star size={20} color="#ffee00f9" />
+                                                <Star size={20} color="#ffee00f9" />
+                                                <Star size={20} color="#ffee00f9" />
+                                                <Star size={20} color="#ffee00f9" />
+                                                <Star size={20} color="#ffee00f9" />
+                                            </span>
+                                        </h4>
+                                        <ContainerButtonComents>
+                                            <small>{person.idPerson}</small>
+                                            <a                 
+                                                onClick={() => setOpen(!open)}
+                                                aria-controls="example-collapse-text"
+                                                aria-expanded={open}>
+                                                {open ? 'Fechar' : 'Abrir'}
+                                            </a>
+                                        </ContainerButtonComents>
+                                    </InfoAvaible>
+                                    <ContainerComents>
+                                        <Collapse in={open}>
+                                            <p>{person.description}</p>
+                                        </Collapse>
+                                    </ContainerComents>
+                                </ContainerTestimonial>
+                            </StyledSlide>
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <StyledSlide>
-                            <ContainerTestimonial>
-                                <ContainerAvaible>
-                                    <img
-                                        
-                                        src={Rute}
-                                        className="testimonial-img"
-                                        alt="Rute Lisboa"
-                                    />
-                                    <span>
-                                    <img
-                                        
-                                        src={Google}
-                                        alt="Google"
-                                    />
-                                    </span>
 
-                                </ContainerAvaible>
-                                <InfoAvaible>
-                                    <h4>Rute Lisboa 
-                                        <span>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                            <Star size={20}color="#ffee00f9"/>
-                                        </span>
-                                     </h4>
-                                    <small>Aluna-OMTC</small>
-                                </InfoAvaible>
-                                <div>
-                                    <p>A OMTC é incrível! O ambiente é acolhedor e inspirador, perfeito para aprender música. O professor Cláudio Luciano é extremamente dedicado e possui uma didática excelente, que facilita muito o aprendizado. Recomendo para todos os amantes de música!</p>
-                                </div>
-                            </ContainerTestimonial>
-                        </StyledSlide>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
-                    <div className="swiper-pagination"></div>
+                <div className="swiper-pagination"></div>
             </div>
         </Container>
+
 
     );
 };
