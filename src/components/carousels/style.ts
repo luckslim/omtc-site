@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Button } from "react-bootstrap";
 export const StyledCarousel = styled(Carousel)`
    img{
       height: 75vh;
@@ -21,4 +21,8 @@ export const StyledCarouselCaption = styled(Carousel.Caption)`
    h3{
       color: ${props=>props.theme['gray-300']};
    }
+`;
+export const ButtonStyled =styled(Button)`
+   
+   
 `;
