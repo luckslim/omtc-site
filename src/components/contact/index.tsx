@@ -9,7 +9,7 @@ export function Contact() {
     return (
         <>
             <Container>
-                <ContainerWhatsApp><WhatsappLogo size={42} weight="thin" /></ContainerWhatsApp>
+                <ContainerWhatsApp href="https://api.whatsapp.com/send/?phone=5521985409849&text=Ol%C3%A1%2C+vim+pelo+site.+Gostaria+de+solicitar+um+or%C3%A7amento%21&type=phone_number&app_absent=0" ><WhatsappLogo size={42} weight="thin" /></ContainerWhatsApp>
                 <ContainerLocation onClick={handleShow}><MapPin size={42} weight="fill" /></ContainerLocation>
             </Container>
 
