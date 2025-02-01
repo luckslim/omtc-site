@@ -37,7 +37,7 @@ export const ContainerProducts = styled.div`
     &:hover{
         box-shadow: 1px 1px 20px 1px ${props=>props.theme['yellow-300']};
         transition:  box-shadow 1s;
-        button{
+        a{
             background-color: ${props=>props.theme['yellow-300']};
             color: ${props=>props.theme['gray-700']};
             font-weight: 500;
@@ -60,7 +60,7 @@ export const ContainerProducts = styled.div`
         display: flex;
         flex-direction: row-reverse;
         
-        button{
+        a{
             background-color: ${props=>props.theme['gray-800-transparent']};
             padding: 0.2rem 0.5rem;
             border: none;
@@ -69,6 +69,7 @@ export const ContainerProducts = styled.div`
             color: ${props=>props.theme['gray-300']};
             border: 1px solid ${props=>props.theme['gray-800']};
             font-weight: 500;
+            text-decoration:none;
 
 
 

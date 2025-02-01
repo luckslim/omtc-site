@@ -7,6 +7,7 @@ import { History } from '../components/history';
 import { TestimonialSwiper } from '../components/Avaliations';
 import { Contact } from '../components/contact';
 import { Working } from '../components/work';
+import { Footer } from '../components/footer';
 export function Home() {
   return (
     <div>
@@ -18,6 +19,7 @@ export function Home() {
       <TestimonialSwiper/>
       <Working/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }
