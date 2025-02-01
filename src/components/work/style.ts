@@ -48,11 +48,13 @@ export const ContainerList = styled.div`
     gap: 1rem;
     width: 600px;
     @media screen and (max-width:780px) {
-        width: 380px;
+        margin: auto;
+        width: 100%;
         display: flex;
     align-items: center;
     justify-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
         
     }
 `;
