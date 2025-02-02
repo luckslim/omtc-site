@@ -174,7 +174,7 @@ export function ContentAbout() {
                         <p>{product.description}</p>
                         <div>
                             <span></span>
-                            <a href="https://api.whatsapp.com/send/?phone=5521985409849&text=Ol%C3%A1%2C+vim+pelo+site.+Gostaria+de+solicitar+um+or%C3%A7amento%21&type=phone_number&app_absent=0">Saiba Mais</a>
+                            <a href="https://api.whatsapp.com/send/?phone=5521985409849&text=Ol%C3%A1%21+Cheguei+atrav%C3%A9s+do+site+da+OMTC+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0">Saiba Mais</a>
                         </div>
                     </ContainerProducts>
                     

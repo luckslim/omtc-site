@@ -8,13 +8,16 @@ import Rute from '../../assets/alunos/Rute.jpeg'
 import Sury from '../../assets/alunos/suryCampos.jpg'
 import MaiconLibonati from '../../assets/alunos/MaiconLibonati.webp'
 import PriscilaSena from '../../assets/alunos/PriscilaSena.png'
+import temotiolucas from '../../assets/alunos/temotiolucas.jpg'
+import vanessaPires from '../../assets/alunos/VanessaPires.jpg'
+
 
 import Google from '../../assets/google.png'
 import { Star } from 'phosphor-react';
 import { useState } from 'react';
 import { Collapse } from 'react-bootstrap';
 interface Person {
-    id: number;
+    id: string;
     nome: string;
     idPerson: string;
     imageUrl: string;
@@ -27,7 +30,7 @@ const students: Person[] = [
         nome: 'Rute Motta Lisboa',
         idPerson: 'Aluna-OMTC',
         imageUrl: Rute,
-        description: 'A minha jornada na música teve o início na OMTC aos 8 anos de idade, onde aprendi a ler partitura e aprendi minhas primeiras músicas no violino. A OMTC me ajudou no meu desenvolvimento técnico no instrumento e na minha percepção musical. Hoje, tenho 19 anos e estudo música na UNIRIO e tive a oportunidade de tocar em importantes salas de concertos e em Teatros, como a Sala Cecília Meireles e o Theatro Municipal do Rio de Janeiro. ',
+        description: 'A minha jornada na música teve o início na OMTC aos 8 anos de idade, onde aprendi a ler partitura e aprendi minhas primeiras músicas no violino. A OMTC me ajudou no meu desenvolvimento técnico no instrumento e na minha percepção musical. Hoje, tenho 19 anos e estudo música na UNIRIO e tive a oportunidade de tocar em importantes salas de concertos e em Teatros, como a Sala Cecília Meireles e o Teatro Municipal do Rio de Janeiro. ',
     },
     {
         id: '2',
@@ -50,6 +53,20 @@ const students: Person[] = [
         imageUrl: PriscilaSena,
         description: 'Riquísima em conhecimento,eu recomendo e super indico! Aprendizado de ampla qualidade, Gratidão!',
     },
+    {
+        id: '5',
+        nome: 'Temotio santos',
+        idPerson: 'Aluno-OMTC',
+        imageUrl: temotiolucas,
+        description: 'Estudei por alguns anos e não me arrependo.  A escola de música se destaca pelo profissionalismo e dedicação do professor. Quem se dedicar, com certeza aprenderá muito.',
+    },
+    {
+        id: '6',
+        nome: 'Vanessa Couto',
+        idPerson: 'Responsável-OMTC',
+        imageUrl: vanessaPires,
+        description: 'Excelente trabalho desenvolvido pela OMTC. O aluno recebe toda atenção e ensinamentos para se desenvolver no ramo musical. O professor Cláudio está de parabéns!',
+    },
 ]
 
 export const TestimonialSwiper = () => {
@@ -61,7 +78,7 @@ export const TestimonialSwiper = () => {
                     modules={[Pagination, Autoplay]}
                     loop={true}
                     speed={300}
-                    autoplay={{ delay: 4000 }}
+                    autoplay={{ delay: 10000 }}
                     slidesPerView="auto"
                     pagination={{
                         el: ".swiper-pagination", // Use a valid DOM element here
